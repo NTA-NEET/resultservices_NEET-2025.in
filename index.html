@@ -335,50 +335,67 @@
             </p>
         </div>
 
-        <script type="text/javascript">
-    function shuffleCaptcha() {
-        // List of captcha images - update with your actual image count or filenames
-        const totalImages = 11; // Example: 10 captcha images
-        const randomIndex = Math.floor(Math.random() * totalImages) + 1;
+        <script>
+  const captchaCodes = {
+    1: "78T57V",
+    2: "LC5733",
+    3: "OJ3E12",
+    4: "UI6949",
+    5: "A42U79",
+    6: "9B546R",
+    7: "A34W13",
+    8: "69X0N9",
+    9: "EF3546",
+    10: "H4V181",
+    11: "HH1420",
+  };
 
-        // Set the new image
-        document.getElementById("captchaImage").src = "captcha/" + randomIndex + ".png";
-    }
-     // Change captcha on initial page load
-    window.onload = shuffleCaptcha;
-</script>
+  let currentCaptchaIndex = 1;
 
-        <script src="/ResultServices/WebResource.axd?d=P8YdepA6iynV7IzrTUtwhMnaq6FF-dDxt8gWHfkhyeOjv8F3NLMX8zz4oYtxqBgLUXgGtMUgwN84dQJkxhT-Cxx8Dig1&amp;t=638568802745067788" type="text/javascript"></script>
-    </form>
+  function shuffleCaptcha() {
+    const totalImages = 10;
+    currentCaptchaIndex = Math.floor(Math.random() * totalImages) + 1;
+    document.getElementById("captchaImage").src = "captcha/" + currentCaptchaIndex + ".png";
+  }
 
-      <script>
-document.getElementById('ctl00_ContentPlaceHolder1_Submit1').addEventListener('click', function (e) {
-    e.preventDefault(); // Prevent form submission for manual check
+  window.onload = shuffleCaptcha;
+
+  document.getElementById('ctl00_ContentPlaceHolder1_Submit1').addEventListener('click', function (e) {
+    e.preventDefault();
 
     const appNum = document.getElementById('ctl00_ContentPlaceHolder1_txtRegNo').value.trim();
     const day = document.getElementById('ctl00_ContentPlaceHolder1_ddlday').value;
     const month = document.getElementById('ctl00_ContentPlaceHolder1_ddlmonth').value;
     const year = document.getElementById('ctl00_ContentPlaceHolder1_ddlyear').value;
-    const secPin = document.getElementById('ctl00_ContentPlaceHolder1_Secpin')?.value.trim();
+    const secPin = document.getElementById('ctl00_ContentPlaceHolder1_Secpin').value.trim().toUpperCase();
 
-    const isMatch = (
-        appNum === '250411743514' &&
-        day === '20' &&
-        month === '03' &&
-        year === '2006' &&
-        secPin !== '' // Optional: Match against image text
-    );
+    const expectedCaptcha = captchaCodes[currentCaptchaIndex];
 
-    if (isMatch) {
-
-            window.location.href = 'https://nta-neet.github.io/students_scorecard_2025/';
-        
-    } else {
-        alert('Invalid credentials. Please check your input.');
+    if (secPin !== expectedCaptcha) {
+      alert("Incorrect Security Pin. Please try again.");
+      return;
     }
-});
 
+    if (
+      appNum === '250411743514' &&
+      day === '20' &&
+      month === '03' &&
+      year === '2006'
+    ) {
+      window.location.href = 'https://nta-neet.github.io/students_scorecard_2025/';
+    } else if (
+      appNum === '111111111111' &&
+      day === '20' &&
+      month === '10' &&
+      year === '2006'
+    ) {
+      window.location.href = 'https://www.youtube.com/';
+    } else {
+      alert("Invalid application number or date of birth.");
+    }
+  });
 </script>
+
 
 <script type="text/javascript">
     function delaySubmit(event) {
