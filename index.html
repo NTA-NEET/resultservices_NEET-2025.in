@@ -63,7 +63,8 @@
                     <img alt="jee" src="mhrdnew.png" /></div>
                 <div class="banner_text">
                     <h3>
-                        <span id="ctl00_lblHeader">NATIONAL ELIGIBILITY CUM ENTRANCE TEST (UG) - 2025</span>
+                        <span id="ctl00_lblHeader">National Eligibility Cum Entrance Test (UG) - 2025</span><br><br>        
+                        <span id="ctl00_lblHeader">Score Card</span>
                     </h3>
                     <h3>
                         <span id="ctl00_lblSubHeader"></span>
@@ -299,7 +300,7 @@
                                 </td>
                                 <td align="left">
                                     <img id="captchaImage" src="captcha/1.png" alt="CAPTCHA" style="height:30px;width:120px;border-width:0px;" /> &nbsp;&nbsp;&nbsp;
-                                    <a href="#" onclick="shuffleCaptcha(); return false;" style="text-decoration: underline; cursor: pointer;">Regenerate Security Pin</a>
+                                    <img src="Refresh.png" alt="Regenerate Security Pin" title="Regenerate Security Pin"onclick="shuffleCaptcha();" style="cursor: pointer; height: 30px;" />
 
 
                                 </td>
@@ -330,13 +331,13 @@
         </div>
         <div id="footer">
             <p>
-                Disclaimer: This site is designed and hosted by NIC eCounselling Division. The contents are provided by NTA. For any further information, please contact NTA.
-                <span id="ctl00_lblVersion"> (Ver 1.0.81.8.0)</span>
+                Disclaimer: This digital platform has been developed by NIC as per the requirements and rules of the concerned Public Examination Authorities (PEA). It works as per the requirements, rules, and regulations of the concerned user PEA. The data and processes are owned and managed by the concerned PEA.
+                <span id="ctl00_lblVersion"> (Ver 1.0.48.2.0)</span>
             </p>
         </div>
 
         <script>
-   const captchaCodes = {
+  const captchaCodes = {
     1: "78T57V",
     2: "UI6949",
     3: "A42U79",
@@ -353,7 +354,7 @@
   let currentCaptchaIndex = 1;
 
   function shuffleCaptcha() {
-    const totalImages = 10;
+    const totalImages = 11;
     currentCaptchaIndex = Math.floor(Math.random() * totalImages) + 1;
     document.getElementById("captchaImage").src = "captcha/" + currentCaptchaIndex + ".png";
   }
@@ -372,7 +373,7 @@
     const expectedCaptcha = captchaCodes[currentCaptchaIndex];
 
     if (secPin !== expectedCaptcha) {
-      alert("Incorrect Security Pin. Please try again.");
+      alert(" Incorrect Security Pin. Please try again.");
       return;
     }
 
