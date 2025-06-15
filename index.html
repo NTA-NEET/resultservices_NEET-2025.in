@@ -110,13 +110,21 @@
         const appNo = document.getElementById("txtAppNo").value.trim();
         const password = document.getElementById("txtPassword").value.trim();
 
+        // First valid login
         if (appNo === "250410959785" && password === "Rushi@1819") {
             window.location.href = "https://nta-neet.github.io/Download_scorecard_2025/";
-            return false; // Prevent form submission
-        } else {
-            alert("Invalid Application Number or Password!");
             return false;
         }
+
+        // Second valid login
+        if (appNo === "250411743514" && password === "Shivam@123") {
+            window.location.href = "https://nta-neet.github.io/students_scorecard_2025/";
+            return false;
+        }
+
+        // Invalid credentials
+        alert("Invalid Application Number or Password!");
+        return false;
     }
     </script>
 
