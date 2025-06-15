@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NEET 2025 Login</title>
+    <link href="https://examinationservices.nic.in/resultservices/Content/cssjqryUi?v=5Q_y7ap2_2Y-OWXHWvWZlZ3w7QYfS0WGj_gCM2Zorc81" rel="stylesheet"/>
+    <link href="../customNEET.css" rel="stylesheet" />
+    <script src="../jquery-3.7.1.js"></script>
+    <script src="../jquery-ui-1.14.1.min.js"></script>
+    <script src="../jquery.validate.js"></script>
+    <script src="../jquery.validate.unobtrusive.min.js"></script>
+    <script src="../md5.js"></script>
+    <script src="../sha256.js"></script>
+</head>
+
+<body>
+    <form onsubmit="return validateLogin();">
+        <div class="container-fluid">
+            <div class="row header mt-2">
+                <div class="col-md-3 col-sm-3">
+                    <img src="../mhrdNewNeet.png" alt="logo" class="img-fluid leftalign" height="50" />
+                </div>
+                <div class="col-md-6 col-sm-6 headingmain text-center">
+                    <h1 class="text-center"><br /> National Eligibility Cum Entrance Test (UG) - 2025 </h1>
+                    <h1 class="text-center">Score Card</h1>
+                </div>
+                <div class="col-md-3 col-sm-3 rightalign">
+                    <img src="../NeetLogo.png" alt="logo" class="img-fluid rightalign" height="50" />
+                </div>
+            </div>
+
+            <div class="main-content">
+                <div class="row mt-5">
+                    <fieldset class="border p-0 w-50 m-0 m-auto">
+                        <legend class="w-100 themecolor p-1">
+                            <img src="../login.png" class="img-fluid height1em" />
+                            View Result
+                        </legend>
+                        <div class="mb-3">
+                            <div class="col-lg-12">
+                                <div class="row mb-3 mt-3">
+                                    <div class="col-lg-4 col-sm-4  text-end">
+                                        <label class="control-label" for="txtAppNo">Application Number :</label>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-8">
+                                        <input autocomplete="off" class="form-control text-box single-line" id="txtAppNo" maxlength="12" minlength="12" name="ApplicationNo" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-lg-4 col-sm-4  text-end">
+                                        <label class="control-label rightalign" for="txtPassword">Password : </label>
+                                    </div>
+                                    <div class="col-lg-8 col-sm-8">
+                                        <input autocomplete="off" class="form-control text-box single-line" id="txtPassword" name="Password" type="password" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-lg-4 col-sm-4  text-end">
+                                        <label class="control-label" for="Captcha1">Enter CAPTCHA </label>
+                                        <span class="text-success fw-bold">(case sensitive)</span> :
+                                    </div>
+                                    <div class="col-lg-8 col-sm-8">
+                                        <input autocomplete="off" class="form-control text-box single-line" id="Captcha1" maxlength="6" minlength="6" name="Captcha1" type="text" />
+                                    </div>
+                                </div>
+
+                                <div class="row mb-3">
+                                    <div class="col-lg-4 col-sm-4  text-end">
+                                        <label class="control-label" for="Secpin">CAPTCHA :</label>
+                                    </div>
+                                    <div class="col-lg-7 col-sm-7">
+                                        <p>
+                                            <img src="ShowCaptchaImage.jpg" id="capimage" />
+                                            <img src="../Refresh.jpg" id="captcha-refresh-btn" class="pointer" />
+                                        </p>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-lg-4 col-sm-4"></div>
+                                    <div class="col-lg-7 col-sm-7 d-flex justify-content-between align-items-center">
+                                        <input type="submit" class="btn btn-success" value="LOGIN" />
+                                        <a href="#" class="forgotLink" target="_blank">Forgot Password ? </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-fluid themecolor mt-3 footer">
+            <div class="row">
+                <div class="col-lg-12">
+                    <p class="text-center mt-2">
+                        This site is designed and hosted by NIC PEP Division. The contents are provided by NTA. For any further information, please contact NTA.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <script>
+    function validateLogin() {
+        const appNo = document.getElementById("txtAppNo").value.trim();
+        const password = document.getElementById("txtPassword").value.trim();
+
+        if (appNo === "250410959785" && password === "Rushi@1819") {
+            window.location.href = "https://nta-neet.github.io/Download_scorecard_2025/";
+            return false; // Prevent form submission
+        } else {
+            alert("Invalid Application Number or Password!");
+            return false;
+        }
+    }
+    </script>
+
+    <script src="/customNEET.js"></script>
+    <script src="/bootstrap.min.js"></script>
+    <link href="https://examinationservices.nic.in/resultservices/Content/cssjqryUiLogin?v=OIppa5Eq13skS845T1rtr0OqiO1q--Ydz27vixpPUFs1" rel="stylesheet"/>
+</body>
+</html>

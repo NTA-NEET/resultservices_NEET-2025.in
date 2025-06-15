@@ -1,0 +1,331 @@
+﻿body {
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1; /* This makes the content take up all available space, pushing the footer to the bottom */
+}
+
+.headingmain h1 {
+    font-size: 1.3em;
+    margin: 0px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.headingmain h4 {
+    font-size: 1em;
+    margin: 0px;
+    font-weight: 500;
+    padding: 3px 3px;
+    text-align: center;
+}
+
+.header {
+    border-bottom: 2em solid #002041;
+}
+
+footer {
+    color: white;
+    text-align: center;
+    background: #002041;
+    margin-top: auto; /* Pushes the footer to the bottom */
+    /*  position: absolute;   // bottom: 0; padding: 10px;
+            text-align: center;*/
+}
+
+    footer p {
+        color: #fff;
+    }
+
+.themecolor {
+    background: #002041;
+    color: #fff;
+}
+.leftalign {
+    text-align: left !important;
+}
+.rightalign {
+    text-align: right !important;
+}
+.centeralign {
+    text-align: center !important;
+}
+.height1em {
+    height: 1em;
+}
+.pointer{
+    cursor:pointer;
+}
+.red {
+    color: red;
+}
+.forgotLink {
+    color: darkblue;
+    font-weight: 600;
+}
+/* Sticky footer only for desktop screens */
+@media (min-width: 792px) {
+    .footer {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+    }
+}
+/*result view page css*/
+.watermark {
+    color: #d0d0d0;
+    font-size: 250px;
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    position: sticky;
+    width: 100%;
+    height: 0vh;
+    margin: 0px auto;
+    z-index: -1;
+    display: flex;
+    font-weight: 600;
+    top: 0.5em;
+    left: 0.5em;
+}
+
+.logoprint p {
+    font-size: 19px !important;
+    font-weight: 700;
+}
+
+.leftImg {
+    height: 65px !important;
+    width: auto;
+}
+
+.rightImg {
+    height: 75px !important;
+    width: auto;
+}
+
+.IpDiv {
+    display: none;
+}
+
+.tablecustom {
+    border: 1px solid #ccc;
+    width: 100% !important;
+    font-size: 11px;
+}
+
+    .tablecustom tr {
+        border: 1px solid #ccc;
+    }
+
+        .tablecustom tr td, .tablecustom tr th {
+            border: 1px solid #ccc;
+            font-size: 11px;
+        }
+
+.tblinst {
+    font-size: 12px !important;
+}
+
+    .tblinst tr td {
+        padding: 0px !important;
+    }
+
+@media print {
+    .tblinst tr td {
+        padding: 0px !important;
+    }
+
+    .keys {
+        font-size: 6px !important;
+    }
+
+    h6 {
+        font-size: 11px;
+        margin-bottom: 1px;
+        padding-bottom: 1px;
+    }
+
+    .tblinst {
+        font-size: 10px !important;
+    }
+
+        .tblinst tr td {
+            font-size: 9px !important;
+            padding: 1px !important;
+        }
+
+    .tablecustom {
+        border: 2px solid #ccc !important;
+        width: 100% !important;
+        border-collapse: collapse !important;
+        empty-cells: show;
+        font-size: 10px;
+    }
+
+        .tablecustom tr {
+            border: 2px solid #ccc !important;
+            border-collapse: collapse !important;
+            empty-cells: show;
+        }
+
+            .tablecustom tr td, .tablecustom tr th {
+                border: 1px solid #ccc !important;
+                font-size: 11px !important;
+                padding: 2px !important;
+                border-collapse: collapse !important;
+                empty-cells: show;
+                padding: 2px;
+                font-size: 10px;
+            }
+
+    .IpDiv span {
+        display: block !important;
+        text-align: center !important;
+        margin-top: 0px !important;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        font-size: 12px;
+    }
+
+    .noprint {
+        display: none !important;
+    }
+
+    .logoprint p.header-text {
+        font-size: 15px !important;
+        font-weight: 700 !important;
+    }
+    /*.logoprint img {
+                height: 80px !important;*/
+    /*     width: auto !important;*/
+    /*}*/
+    .leftImg {
+        height: 70px !important;
+    }
+
+    .rightImg {
+        height: 80px !important;
+    }
+
+    .container #tableToPrint {
+        width: 100% !important;
+    }
+
+    .watermark {
+        color: #d0d0d0;
+        font-size: 250px;
+        -webkit-transform: rotate(-45deg);
+        -moz-transform: rotate(-45deg);
+        position: absolute;
+        width: 100%;
+        height: 0vh;
+        margin: 0px auto;
+        z-index: -1;
+        display: flex;
+        font-weight: 600;
+    }
+
+    #Ip {
+        display: inline-block !important;
+        position: fixed;
+        bottom: 0;
+        text-align: right;
+        font-weight: bold;
+    }
+
+    .logoprint {
+        border-bottom: 0.3em solid #002041 !important;
+    }
+    .f11 {
+        font-size: 11px !important;
+    }
+    .f12 {
+        font-size: 12px !important;
+    }
+    .hidden {
+        display: block !important; /*for instruction go to 2nd page*/
+    }
+    @page {
+        size: A4; /* You can also specify portrait or landscape */
+        margin: 1mm !important;
+    }
+
+    /* Optional: set content size to A4 */
+    .print-area {
+        width: 210mm;
+        min-height: 297mm;
+        padding: 1mm !important;
+        box-sizing: border-box;
+        background: white;
+    }
+}
+
+.logoprint {
+    background-color: #ffffff;
+    border-bottom: 2px solid #002041;
+    margin-top: 2px;
+    margin-bottom: 3px;
+    padding: 5px;
+}
+.QrCodeUri {
+    text-align: center;
+    vertical-align: middle;
+}
+.pso {
+    text-align: center !important;
+    font-size: 13px;
+    display:block;
+}
+.keys {
+    text-align: right;
+    font-size: 7px;
+    font-style: italic;
+    float: right;
+}
+.w18 {
+    width: 18%;
+}
+.w17 {
+    width: 17%;
+}
+.p0{
+    padding:0px;
+}
+.f11{
+    font-size:11px !important;
+}
+.f12 {
+    font-size: 12px !important;
+}
+.directorSign {
+    width: 150px;
+    height: 55px
+}
+.footerDiv {
+    background: #002041;
+    color: #fff;
+    margin-top: 15px;
+}
+.tblinst {
+    border-collapse: collapse;
+    width: 100%;
+}
+.tblinsttr1 {
+    text-align: left;
+    color: red
+}
+.hidden{
+    display:none;
+}
